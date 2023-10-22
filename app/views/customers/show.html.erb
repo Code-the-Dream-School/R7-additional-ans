@@ -9,5 +9,9 @@
   <%= link_to "Back to customers", customers_path, class: "btn btn-primary" %> |
   </div>
   <div style="float: left; width: auto;">
+  <!--
   <%= button_to "Delete  this customer", @customer, class: "btn btn-primary", method: :delete %>
+  -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-<%= customer.id%>">
+  <%= render "deleteModal", customer: customer %>
 </div>

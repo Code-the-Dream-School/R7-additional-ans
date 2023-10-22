@@ -267,7 +267,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  bootstrap
+  bootstrap (~> 5.3)
   capybara
   debug
   email_validator
@@ -280,7 +280,6 @@ DEPENDENCIES
   rails-controller-testing
   rexml
   rspec-rails
-  sassc-rails
   selenium-webdriver
   sprockets-rails
   sqlite3 (~> 1.4)
