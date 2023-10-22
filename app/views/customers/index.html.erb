@@ -22,9 +22,8 @@
             <!--
             <td><%= button_to 'Delete', customer, class: "btn btn-primary", method: :delete, form: { data: { turbo_confirm: "Are you sure?" } } %></td>
             -->
-            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-<%= customer.id%>">Delete</button></td>
+            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-<%= customer.id %>">Delete</button></td>
           </tr>
-          <%= render "deleteModal", customer: customer %>
         <% end %>
       </tbody>
     </table>
@@ -33,3 +32,6 @@
     <% end %>
 </div>
 <%= link_to "New customer", new_customer_path, class: "btn btn-primary"  %>
+<% @customers.each do |customer| %>
+<%= render "deleteModal", customer: customer %>
+<% end %>

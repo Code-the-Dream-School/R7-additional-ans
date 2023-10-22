@@ -1,5 +1,5 @@
 class Customer < ApplicationRecord
-  has_many :orders
+  has_many :orders, dependent: :destroy
 
   validates :first_name, presence: true, format: { with: /\A[a-z\-' ]+\z/i }
   validates :last_name, presence: true, format: { with: /\A[a-z\-' ]+\z/i }

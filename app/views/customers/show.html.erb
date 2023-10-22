@@ -12,6 +12,7 @@
   <!--
   <%= button_to "Delete  this customer", @customer, class: "btn btn-primary", method: :delete %>
   -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-<%= customer.id%>">
-  <%= render "deleteModal", customer: customer %>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal-<%= @customer.id%>">Delete</button>
 </div>
+
+  <%= render "deleteModal", customer: @customer %>

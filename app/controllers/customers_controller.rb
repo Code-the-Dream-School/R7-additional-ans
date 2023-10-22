@@ -90,6 +90,7 @@ class CustomersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_customer
       @customer = Customer.find(params[:id])
+      puts("we are about to delete customer #{:id}")
     end
 
     # Only allow a list of trusted parameters through.
